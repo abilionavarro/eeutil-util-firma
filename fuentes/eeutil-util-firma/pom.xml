@@ -14,9 +14,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>eeutil-util-firma</artifactId>
-	<version>4.0.8</version>
 	<packaging>war</packaging>
-
 
 	<parent>
 		<groupId>es.gob.aapp.eeutil</groupId>
@@ -30,37 +28,6 @@
 		<!-- mimeutil.version>2.1.3</mimeutil.version -->
 
 	</properties>
-
-	<scm>
-		<connection>scm:git:https://github.com/josefsabater/eeutil-util-firma.git</connection>
-		<developerConnection>scm:git:[push=]https://github.com/josefsabater/eeutil-util-firma.git[fetch=]https://github.com/josefsabater/eeutil-util-firma.git</developerConnection>
-		<url>https://github.com/josefsabater/eeutil-util-firma.git</url>
-		<tag>HEAD</tag>
-	</scm>
-
-	<repositories>
-		<repository>
-			<releases>
-				<enabled>true</enabled>
-				<updatePolicy>never</updatePolicy>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-				<updatePolicy>never</updatePolicy>
-			</snapshots>
-			<id>maven-carm-es-eeutil-util-firma-remote-repos</id>
-			<name>repo-carm-es-eeutil-util-firma-remote-repos</name>
-			<url>https://raw.githubusercontent.com/josefsabater/eeutil-util-firma/mvn-repo</url>
-		</repository>
-		<repository>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-			<id>central</id>
-			<name>Central Repository</name>
-			<url>https://repo.maven.apache.org/maven2</url>
-		</repository>
-	</repositories>
 
 
 	<dependencies>
@@ -108,12 +75,12 @@
 		<dependency>
 			<groupId>es.gob.aapp.eeutil</groupId>
 			<artifactId>eeutil-pdf-conversion</artifactId>
-			<version>4.2</version>
+			<version>4.2.0-CARM.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>es.gob.aapp.eeutil</groupId>
 			<artifactId>eeutil-comunes</artifactId>
-			<version>4.2</version>
+			<version>4.2.0-CARM.1-SNAPSHOT</version>
 		</dependency>
 
 		<!-- pdfoptmizer pdftools -->
@@ -224,13 +191,6 @@
 			</activation>
 			<dependencies>
 				<dependency>
-					<groupId>com.oracle.database.jdbc</groupId>
-					<artifactId>ojdbc6</artifactId>
-					<version>11.2.0.4</version>
-					<type>jar</type>
-					<scope>provided</scope>
-				</dependency>
-				<dependency>
 					<groupId>com.pdfTools</groupId>
 					<artifactId>pDFOptimizer-linux</artifactId>
 					<version>4.8</version>
@@ -240,11 +200,6 @@
 		<profile>
 			<id>debug</id>
 			<dependencies>
-				<dependency>
-					<groupId>com.oracle.database.jdbc</groupId>
-					<artifactId>ojdbc6</artifactId>
-					<version>11.2.0.4</version>
-				</dependency>
 				<dependency>
 					<groupId>mysql</groupId>
 					<artifactId>mysql-connector-java</artifactId>
